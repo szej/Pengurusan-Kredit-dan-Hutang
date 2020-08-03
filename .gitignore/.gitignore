@@ -1,0 +1,42 @@
+#Atur cara bagi mengira bayaran minimum dan baki dalam penyata bulan Februari
+
+#Pengisytiharan pemboleh ubah dan pemalar
+#Input
+baki_tertunggak = float(input("Masukkan baki tertunggak: RM "))
+
+#Proses
+kadar_faedah_bulanan = 15/100
+bayaran_minimum = baki_tertunggak * kadar_faedah_bulanan
+
+#Output
+print("\nBayaran minimum ialah RM", bayaran_minimum)
+
+#Input
+print("\n\nMenu Pilihan:")
+print("Ya = 1")
+print("Tidak = 2")
+BDPBF = float(input("Adakah anda membuat bayaran minimum di bulan Januari? : "))
+
+#Proses
+if BDPBF == 1 :
+ baki_tertunggak_baharu = baki_tertunggak - bayaran_minimum
+ kadar_faedah_tahunan = 18/100
+ tempoh_tertakluk_kepada_caj_kewangan = 15/365
+ yuran_faedah = baki_tertunggak * (kadar_faedah_tahunan * tempoh_tertakluk_kepada_caj_kewangan)
+ baki_dalam_penyata_bulan_Februari_1 = baki_tertunggak_baharu + yuran_faedah
+#Output
+ print("\nBaki dalam penyata bulan Februari ialah RM", baki_dalam_penyata_bulan_Februari_1 )
+
+#Proses
+if BDPBF == 2 :
+ baki_tertunggak_baharu = baki_tertunggak - bayaran_minimum
+ kadar_faedah_tahunan = 18/100
+ tempoh_tertakluk_kepada_caj_kewangan = 15/365
+ caj_pembayaran_lewat = 1/100
+ yuran_faedah = baki_tertunggak * (kadar_faedah_tahunan * tempoh_tertakluk_kepada_caj_kewangan)
+ jumlah_pembayaran_lewat = caj_pembayaran_lewat * (baki_tertunggak + yuran_faedah)
+ baki_dalam_penyata_bulan_Februari_2 = baki_tertunggak_baharu + yuran_faedah + jumlah_pembayaran_lewat
+#Output
+ print("\nBaki dalam penyata bulan Februari ialah RM", baki_dalam_penyata_bulan_Februari_2 )
+   
+
